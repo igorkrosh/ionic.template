@@ -10,7 +10,7 @@ IonPage
 		div#container
 			strong Ready to create an app?
 			p 
-				|Start with Ionic
+				|Start with Ionic?
 				a(target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components")
 			Example
 </template>
