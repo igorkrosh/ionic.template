@@ -1,9 +1,8 @@
-<template>
-  <ion-app>
-    <ion-router-outlet />
-  </ion-app>
+<template lang="pug">
+IonApp
+	IonRouterOutlet
 </template>
 
-<script>
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
+<script setup>
+import { IonApp, IonRouterOutlet } from "@ionic/vue";
 </script>
