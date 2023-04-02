@@ -2,3 +2,25 @@
 {
     padding: 25px;
 }
+
+.function-item
+{
+    margin-bottom: 25px;
+}
+
+.btn
+{
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.1s;
+    background: #3880ff;
+    margin-bottom: 15px;
+}
+
+.btn:active
+{
+    opacity: 0.5;
+}
