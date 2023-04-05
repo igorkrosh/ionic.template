@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
 import store from './store';
+import IonicStorage from './plugins/ionic-storage';
 
 import { IonicVue } from '@ionic/vue';
 
@@ -28,6 +29,7 @@ import './theme/style.scss';
 const app = createApp(App)
   .use(IonicVue)
   .use(store)
+  .use(IonicStorage)
   .use(router);
   
 router.isReady().then(() => {

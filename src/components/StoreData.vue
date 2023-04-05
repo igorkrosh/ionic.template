@@ -2,15 +2,34 @@
 .function-item
     h5 Локальные данные (VueX):
     .wrapper
-        span Локальное значение: {{$store.getters.STATE}}
+        span Локальное значение: {{$store.getters.COUNT}}
         button.btn(@click="$store.commit('INCREMENT')") +
+.function-item
+    h5 Сохрание данных (IonicStorage):
+    p Сохраненное значение: {{$store.getters.LOCAL}}
+    input(v-model="newValue" )
+    button.btn(@click="Save(newValue)") Сохранить
 
 
 </template>
 
 <script>
 export default {
-    name: "StoreData"
+    name: "StoreData",
+    data() {
+        return {
+            newValue: ''
+        }
+    },
+    methods: {
+        Save(data)
+        {
+            this.$store.dispatch('SAVE_LOCAL', data)
+        }
+    },
+    mounted() {
+        this.$store.dispatch('LOAD_LOCAL')
+    }
 }
 </script>
 
@@ -32,5 +51,15 @@ export default {
         margin-left: auto;
 
     }
+}
+
+input
+{
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid #818181;
+    padding: 10px 20px;
+    margin-bottom: 15px;
 }
 </style>
