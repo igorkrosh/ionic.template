@@ -28,7 +28,8 @@
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
     "vue": "^3.2.21",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@capacitor/cli": "4.7.1",
