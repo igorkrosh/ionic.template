@@ -16,6 +16,7 @@
     "@capacitor/android": "4.7.1",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.7.1",
+    "@capacitor/geolocation": "^4.1.0",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/local-notifications": "^4.1.5",
@@ -30,6 +31,7 @@
     "sass-loader": "^13.2.2",
     "vue": "^3.2.21",
     "vue-router": "^4.0.12",
+    "vue-yandex-maps": "^1.0.8",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

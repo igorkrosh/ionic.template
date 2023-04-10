@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router';
 import store from './store';
 import IonicStorage from './plugins/ionic-storage';
+import YmapPlugin from 'vue-yandex-maps'
+
 
 import { IonicVue } from '@ionic/vue';
 
@@ -27,10 +29,17 @@ import './theme/variables.css';
 import './theme/style.scss';
 
 const app = createApp(App)
-  .use(IonicVue)
-  .use(store)
-  .use(IonicStorage)
-  .use(router);
+    .use(IonicVue)
+    .use(store)
+    .use(IonicStorage)
+    .use(YmapPlugin, {
+        apiKey: 'ed5f5ac6-1a0f-4894-83b8-ee7a6c71f1d0',
+        lang: 'ru_RU', // Используемый язык
+        coordorder: 'latlong', // Порядок задания географических координат
+        debug: true, // Режим отладки
+        version: '2.1' // Версия Я.Карт
+    })
+    .use(router);
   
 router.isReady().then(() => {
   app.mount('#app');
